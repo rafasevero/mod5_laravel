@@ -20,8 +20,7 @@ class SupportController extends Controller
     {
 
         $supports = $this->service->getAll($request->filter);//pegar todos os suportes
-        dd($supports);
-        return view('admin/supports/index', compact('supports','xss'));
+        return view('admin/supports/index', compact('supports'));
     }
 
     public function show(string|int $id){
